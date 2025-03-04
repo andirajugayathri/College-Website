@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: FFFFFF;
+}
+.header {
+    background-color: #fff;
+    padding: 10px 60px;
+    color:#F9790F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.contact span {
+    margin-right: 15px;
+}
+.socialicons a {
+    margin-left: 10px;
+    color:#F9790F;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #F9790F;
+    padding: 10px 60px 10px 0px;
+}
+.nav-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-item {
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight:lighter;
+}
+.nav-item1 {
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-top: none;
+    border-left: none;
+    border-right:none ;
+    font-size: 14px;
+    text-transform:capitalize;
+    font-weight:bold;
+}
+.banner {
+    background-color: #ff7f27;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="rgba(255,255,255,0.1)" d="M30,10 L35,20 L45,15 Z M70,20 L80,25 L75,35 Z M20,50 L10,60 L30,70 Z M80,70 L70,80 L90,85 Z" /></svg>');
+    background-size: 300px;
+    background-repeat: repeat;
+}
+.container {
+    
+    margin: 0 auto;
+}
+.container .image{
+    margin-left:380px;
+}
+.accreditation-badges {
+    display: flex;
+    column-gap: 30px;
+    position: absolute;
+    right: 100px;
+    top: 20px;
+    
+}
+.partnership {
+   margin-right: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.partnership h3 {
+    font-size: 100px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-transform: lowercase;
+}
+.partnership h4 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+.partnership p {
+    color:darkblue;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.rocketimage {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-40%);
+}
+.rocket {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.about {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 30px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  .image-container {
+    flex: 0 0 30%;
+    position: relative;
+  }
+  .main-image {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    text-align: center;
+  }
+  
+  .logo-image {
+    width: 90%;
+    border-radius: 5px;
+  }
+  .counselling-code {
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+    background-color: #F9790F;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  .counselling-code .label {
+    font-size: 14px;
+  }
+  
+  .counselling-code .code {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .content-container {
+    flex: 0 0 60%;
+    padding: 0 20px;
+  }
+  
+  .about-heading {
+    color: #F9790F;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .title {
+    font-size: 36px;
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .description {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+  }
+  
+  .stat-box {
+    flex: 0 0 30%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e8914e;
+  }
+  .stat-value span {
+    font-size: 18px;
+  }
+  .stat-label {
+    color: #666;
+    margin-top: 5px;
+  }
+  .learn-more-btn {
+    background-color: #e8914e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact, .social-icons {
+        margin: 5px 0;
+    }
+    .accreditation-badges {
+        position: static;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .rocketimage {
+        right: 20px;
+        top: 50%;
+    }
+    .rocket {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-item {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .logo-text h1 {
+        font-size: 24px;
+    }
+    
+    .partnership h3 {
+        font-size: 36px;
+    }
+    
+    .rocketimage {
+        display: none;
+    }
+}
