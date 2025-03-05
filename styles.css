@@ -34,7 +34,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
 }
-.nav-item {
+.nav-item,.nav-item1 {
     color: white;
     padding: 8px 15px;
     text-decoration: none;
@@ -42,17 +42,12 @@ body {
     text-transform: uppercase;
     font-weight:lighter;
 }
-.nav-item1 {
-    color: white;
-    padding: 8px 15px;
-    text-decoration: none;
-    border: 2px solid white;
-    border-top: none;
-    border-left: none;
-    border-right:none ;
+.nav-item1:focus{
+    border-bottom:1px solid white;
     font-size: 14px;
-    text-transform:capitalize;
-    font-weight:bold;
+    font-weight: bold;
+    text-transform:capitalize ;
+    border-width:5px;
 }
 .banner {
     background-color: #ff7f27;
@@ -63,13 +58,6 @@ body {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="rgba(255,255,255,0.1)" d="M30,10 L35,20 L45,15 Z M70,20 L80,25 L75,35 Z M20,50 L10,60 L30,70 Z M80,70 L70,80 L90,85 Z" /></svg>');
     background-size: 300px;
     background-repeat: repeat;
-}
-.container {
-    
-    margin: 0 auto;
-}
-.container .image{
-    margin-left:380px;
 }
 .accreditation-badges {
     display: flex;
@@ -113,55 +101,66 @@ body {
     position: relative;
 }
 
-
-
-.about {
+.about{
+    margin:50%;
+    width: 100%;
+    height: 160vh;  
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 40px;
-    margin: 20px 30px;
+    column-gap: 50px;
+    margin: 20px 20px;
     padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  .image-container {
-    flex: 0 0 30%;
+  } 
+
+.image-container{
+    flex:0 0 30%;
+}
+.college-logo { 
+    position: absolute;
+    z-index: 0;
+    top: 86%;
+    left: 410px;
+    max-width: 250px;
+    max-height: 100px;
+}
+.group-image {
+    position: absolute;
+    left: 13%;
+    z-index:1;
+    top: 103%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.individual-image {
     position: relative;
-  }
-  .main-image {
-    width: 100%;
-    border-radius: 5px;
-  }
-  .logo {
+    right: 25%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 388px;
+    height: 549px;
+}
+.counselling-code {
     position: absolute;
-    top: 10px;
-    right: 0px;
-    text-align: center;
-  }
-  
-  .logo-image {
-    width: 90%;
-    border-radius: 5px;
-  }
-  .counselling-code {
-    position: absolute;
-    bottom: -20px;
-    left: 0px;
+    bottom: -433px;
+    left: 100px;
     background-color: #F9790F;
+    border:5px solid white;
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-  }
-  .counselling-code .label {
+    padding: 15px 40px;
+    border-radius: 10px;
+}
+.counselling-code .label {
     font-size: 14px;
-  }
+}
   
-  .counselling-code .code {
-    font-size: 28px;
+.counselling-code .code {
+    font-size: 45px;
     font-weight: bold;
-  }
-  
-  .content-container {
+}
+.content-container {
     flex: 0 0 50%;
     padding: 0 20px;
 
@@ -265,20 +264,24 @@ body {
 
 .cards{
     background-color: #FEF2E7;
+    padding-top: 10px;
+    padding-bottom: 40px;
 }
 .cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr  ;
-    gap: 20px;
-    margin: 50px 50px ;
+    gap: 40px;
+    margin:40px 50px ;
     
 }
 .card {
     background-color: white; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 25px;
+    padding: 35px;
     margin:10px auto;
+    width:397px;
+    height:380px;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
@@ -292,13 +295,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .card-icon img {
-    width: 30px;
-    height: 30px;
+    width: 64px;
+    height: 64px;
 }
-
+.cards hr{
+    color: #E1E1E1;
+    margin-bottom: 20px;
+}
 .card.highlight {
     background-color:#F9790F;
     color: white;
@@ -338,13 +345,32 @@ body {
 .card.highlight .read-more {
     color: white;
 }
-
+.card.highlight .read-more svg {
+    background-color:white;
+    border-radius: 70%;
+}
 .read-more svg {
     margin-left: 5px;
+    background-color:#F9790F;
+    color: #ddd;
+    border-radius: 70%;
 }
-
+.read{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    background-color: #F9790F;
+    padding:8px 20px;
+    border:none;
+    border-radius: 10px;
+}
 @media screen and (max-width: 768px) {
     .cards-container {
         grid-template-columns: 1fr;
     }
 }
+
+
+
